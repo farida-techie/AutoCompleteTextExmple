@@ -1,18 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/favourite_food"
+        android:textStyle="bold"
+        android:textColor="@color/purple_700"
+        android:textSize="18sp"
+         />
+    <AutoCompleteTextView
+        android:id="@+id/completeText"
+        android:completionThreshold="1"
+        android:hint="@string/food_name"
+        android:textSize="19sp"
+        android:maxLines="1"
+        android:ems="10"
+        android:textColor="@color/teal_200"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn"
+        android:text="@string/submit"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:padding="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:text="diyspla"
+        android:visibility="gone"
+        android:textSize="19sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
